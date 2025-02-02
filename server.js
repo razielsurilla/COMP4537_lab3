@@ -6,7 +6,7 @@ const url = require('url');
 
 class Server {
     constructor(port) {
-        this.port = port;
+        this.port = process.env.PORT || port;
         this.date_handler = new DateHandler();
         this.file_writer = new FileWriter();
         this.file_reader = new FileReader();
@@ -79,6 +79,3 @@ class Server {
         res.end();
     }
 }
-
-const server = new Server(8000);
-server.start();
