@@ -79,3 +79,4 @@ class Server {
         res.end();
     }
 }
+module.exports = Server;
